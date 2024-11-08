@@ -1,0 +1,120 @@
+ 1002  kubectl get po
+ 1003  kubectl get svc
+ 1004  kubectl delete svc nginx
+ 1005  kubectl get svc
+ 1006  ls
+ 1007  vi svc.yaml
+ 1008  vi pod.yaml
+ 1009  kubectl apply -f pod.yaml
+ 1010  kubectl get po
+ 1011  kubectl delete po init-container nginx-pod2
+ 1012  kubectl get po
+ 1013  systemctl stop httpd
+ 1014  kubectl get po
+ 1015  curl -v loahost
+ 1016  curl -v localhost
+ 1017  kubectl get po-o wide
+ 1018  kubectl get po -o wide
+ 1019  vi svc.yaml
+ 1020  kubectl apply -f svc.yaml
+ 1021  kubectl get svc
+ 1022  curl -v localhost:30010
+ 1023  vi svc.yaml
+ 1024  kubectl get svc
+ 1025  kubectl describe svc ng-svc
+ 1026  kubectl get po -o wide
+ 1027  vi pod.yaml
+ 1028  vi svc.yaml
+ 1029  kubectl get svc
+ 1030  kubectl delete svc ng-svc
+ 1031  vi svc.yaml
+ 1032  kubectl apply -f svc.yaml
+ 1033  kubectl get svc
+ 1034  kubectl get po
+ 1035  kubectl get svc
+ 1036* kubectl descr
+ 1037  kubectl get po -o wide
+ 1038  vi svc.yaml
+ 1039  kubectl get svc
+ 1040  kubectl delete svc ng-svc
+ 1041  kubectl apply -f svc.yaml
+ 1042  kubectl get svc
+ 1043  kubectl delete svc ng-svc
+ 1044  kubectl get svc
+ 1045  kubectl apply -f svc.yaml
+ 1046  kubectl get svc
+ 1047  vi svc.yaml
+ 1048  kubectl delete svc ng-svc
+ 1049  kubectl apply -f svc.yaml
+ 1050  kubectl get svc
+ 1051  kubectl delete svc ng-svc
+ 1052  kubectl get po
+ 1053  kubectl delete po nginx-pod
+ 1054  vi deploy.yaml
+ 1055  kubectl apply -f deploy.yaml
+ 1056  kubectl get po
+ 1057  kubectl apply -f svc.yaml
+ 1058  kubectl describe svc ng-svc
+ 1059  ls
+ 1060  vi svc-lb.yaml
+ 1061  kubectl get svc
+ 1062  kubectl delete svc ng-svc
+ 1063  kubectl apply -f  svc-lb.yaml
+ 1064  kubectl get svc
+ 1065  ls
+ 1066  cd ingress-controller/
+ 1067  ls
+ 1068  cd deployments/
+ 1069  ls
+ 1070  cd ..
+ 1071  vi ingress-rule.yaml
+ 1072  ls
+ 1073  vi pod-ns.yaml
+ 1074  vi pod-node-selector.yaml
+ 1075  kubectl taint no master node-role.kubernetes.io/control-plane:NoSchedule
+ 1076  kubectl get no
+ 1077  kubectl describe no master
+ 1078  :q
+ 1079  kubectl describe no agent
+ 1080  :q
+ 1081  kubectl describe no  | grep -i taint
+ 1082  kubectl taint no agent app=prod:NoSchedule
+ 1083  kubectl describe no  | grep -i taint
+ 1084  kubectl run testpo --image=nginx
+ 1085  kubectl get po
+ 1086  kubectl describe po testpo
+ 1087  :q
+ 1088  kubectl describe no  | grep -i taint
+ 1089  kubectl taint no agent app=prod:NoSchedule-
+ 1090  kubectl describe no  | grep -i taint
+ 1091  kubectl get po
+ 1092  ls
+ 1093  vi pod-toleration.yaml
+ 1094  #kubectl taint no agent app=prod:NoSchedule
+ 1095  #Noscheule
+ 1096  #preferNoSchedule
+ 1097  #NoExecute
+ 1098  kubectl get po
+ 1099  kubectl taint no agent app=prod:NoExecute
+ 1100  kubectl get po
+ 1101  kubectl get po --show-labels
+ 1102  kubectl get po -o wide
+ 1103  #kubectl taint no agent app=prod:NoExecute
+ 1104  cat pod-toleration.yaml
+ 1105  kubectl describe no  | grep -i taint
+ 1106  kubectl taint no agent app=prod:NoExecute-
+ 1107  kubectl get po -o wide
+ 1108  kubectl describe no  | grep -i taintls
+ 1109  ls
+ 1110  vi metrics-server.yaml
+ 1111  kubectl get po
+ 1112  kubectl top po
+ 1113  kubectl get ns
+ 1114  kubectl create ns app
+ 1115  kubectl get ns
+ 1116  kubectl delete ns app
+ 1117  kubectl get ns
+ 1118  kubectl get po -n kube-system
+ 1119  cat pv.yaml
+ 1120  cat pvc.yaml
+ 1121  cat pod-storage.yaml

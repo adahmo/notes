@@ -1,0 +1,137 @@
+  965  kubectl get nodes
+  966  kubectl get pod
+  967  kubectl get nodes
+  968  kubectl get no
+  969  #docker run -d --name mycont ninx
+  970  #kubectl run testpod --image=nginx
+  971  kubectl run testpod --image=nginx
+  972  kubectl get pods
+  973  kubectl get po
+  974  #kubectl run testpod --image=nginx
+  975  kubectl get po
+  976  kubectl get po -o wide
+  977  kubectl get no
+  978  kubectl get po -o wi
+  979  #kubectl run testpod --image=nginx
+  980  cd .kube/
+  981  pwd
+  982  vi /etc/kubernetes/admin.conf
+  983  ls -ltr
+  984  vi config
+  985  hostname -i
+  986  hostname -i
+  987  vi config
+  988  useradd aniket
+  989  su - aniket
+  990  userdel -r aniket
+  991  cd
+  992  kubectl get po
+  993  kubectl describe po testpod
+  994  kubectl get po
+  995  #kubectl run testpod2 --image=nginx
+  996  kubectl run testpod2 --image=nginx
+  997  kubectl get po -o wide
+  998  kubectl describe po testpod2
+  999  kubectl get po -n kube-system
+ 1000  ls
+ 1001  cd kubernetes
+ 1002  ls
+ 1003  cd ../k8-lab/
+ 1004  ls
+ 1005  vi pod.yaml
+ 1006  kubectl apply -f pod.yaml
+ 1007  kubectl get po
+ 1008  cat pod.yaml
+ 1009  kubectl describe po nginx-pod
+ 1010  kubectl get po
+ 1011  kubectl api-resources
+ 1012  kubectl api-resources | grep pod
+ 1013  kubectl get po
+ 1014  kubectl delete po testpod testpod2 nginx-pod
+ 1015  kubectl get po
+ 1016  ls
+ 1017  vi deploy.yaml
+ 1018  history | grep -i taint
+ 1019  ls
+ 1020  kubectl apply -f deploy.yaml
+ 1021  kubectl scale --replicas=2 deploy/ng-dep
+ 1022  kubectl scale --replicas=4 deploy/ng-dep
+ 1023  kubectl get po
+ 1024  kubectl get deployment
+ 1025  kubectl get deploy
+ 1026  kubectl delete po ng-dep-7ccb498884-4t4lw
+ 1027  kubectl get deploy
+ 1028  i deploy.yaml
+ 1029  vi deploy.yaml
+ 1030  kubectl apply -f deploy.yaml
+ 1031  vi deploy.yaml
+ 1032  kubectl get deploy
+ 1033  cat deploy.yaml
+ 1034  #7ccb498884-4t4lw
+ 1035  kubectl get po
+ 1036  kubectl delete deploy ng-dep
+ 1037  kubectl apply -f deploy.yaml
+ 1038  kubectl get deploy
+ 1039  cat deploy.yaml
+ 1040  kubectl delete po ng-dep-559c4cdd9d-6kksx
+ 1041  vi deploy.yaml
+ 1042  kubectl apply -f deploy.yaml
+ 1043  kubectl rollout history deploy/ng-dep
+ 1044  kubectl rollout undo deploy/ng-dep --to-revision=1
+ 1045  vi deploy.yaml
+ 1046  kubectl run testpod --image=nginx
+ 1047  kubectl delete po testpod
+ 1048  vi deploy.yaml
+ 1049  #kubectl delete deploy ng-dep
+ 1050  #kubectl delete -f deploy.yaml
+ 1051  kubectl delete -f deploy.yaml
+ 1052  vi deploy.yaml
+ 1053  kubectl apply -f deploy.yaml
+ 1054  vi deploy.yaml
+ 1055  ls
+ 1056  vi rc.yaml
+ 1057  vi rs.yaml
+ 1058  vi rs2.yaml
+ 1059  kubectl apply -f deploy.yaml
+ 1060  kubectl delete rs ng-dep-7ccb498884
+ 1061  kubectl scale --replicas=0 deploy/ng-dep
+ 1062  kubectl scale --replicas=4 deploy/ng-dep
+ 1063  vi deploy.yaml
+ 1064  kubectl apply -f deploy.yaml
+ 1065  kubectl rollout history deploy/ng-dep
+ 1066  kubectl rollout undo deploy/ng-dep --to-revision=1
+ 1067  kubectl scale --replicas=5 deploy/ng-dep
+ 1068  ls
+ 1069  vi pod2.yaml
+ 1070  vi init-pod.yaml
+ 1071  kubectl apply -f init-pod.yaml
+ 1072  kubectl get po
+ 1073  kubectl delete deploy ng-dep
+ 1074  kubectl get po
+ 1075  vi init-pod.yaml
+ 1076  kubectl describe po init-container
+ 1077  vi init-pod.yaml
+ 1078  kubectl get po
+ 1079  kubectl delete po init-container
+ 1080  kubectl apply -f init-pod.yaml
+ 1081  kubectl get po
+ 1082  ls
+ 1083  vi pod-ns.yaml
+ 1084  vi pod-node-selector.yaml
+ 1085  kubectl get no --show-labels
+ 1086  kubectl label no agent app=prod
+ 1087  kubectl get no --show-labels
+ 1088  kubectl label no agent app-
+ 1089  kubectl get no --show-labels
+ 1090  vi pod-node-selector.yaml
+ 1091  kubectl apply -f pod-node-selector.yaml
+ 1092  kubectl get po
+ 1093  kubectl describe po nginx-pod2
+ 1094  vi pod-node-selector.yaml
+ 1095  kubectl get po
+ 1096  kubectl delete po nginx-pod2
+ 1097  kubectl apply -f pod-node-selector.yaml
+ 1098  kubectl get po
+ 1099  vi pod-node-selector.yaml
+ 1100  kubectl get no --show-label
+ 1101  kubectl get no --show-labels
